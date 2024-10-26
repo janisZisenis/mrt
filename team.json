@@ -1,0 +1,6 @@
+{
+    "repositories": [
+        "git@github.com:janisZisenis/mrt-cli.git",
+        "git@github.com:janisZisenis/setup-mrt.git"
+    ] 
+}
