@@ -1,17 +1,13 @@
 #!/usr/bin/env bash
+set -e
 
-command_exists() {
-    command -v "$1" >/dev/null 2>&1
-}
+YELLOW='\033[0;33m'
+NO_COLOR='\033[0m'
 
-upgrade() {
-    local tool="$1"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+BREW_FILE="$SCRIPT_DIR/Brewfile"
 
-    echo "Using Homebrew to install $tool..."
-    brew install "$tool" || brew upgrade "$tool"
-}
-
-if command_exists "brew"; then
+if command -v "$1" >/dev/null 2>&1 "brew"; then
   echo "Homebrew is installed."
 else
   echo "Homebrew is not installed. Please install Homebrew first."
@@ -19,6 +15,5 @@ else
   exit 1
 fi
 
-upgrade jq
-upgrade shellcheck
-upgrade shfmt
+brew update
+brew bundle --file="$BREW_FILE"
