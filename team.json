@@ -2,6 +2,7 @@
     "repositories": [
         "git@github.com:janisZisenis/mrt-cli.git",
         "git@github.com:janisZisenis/setup-mrt.git",
+        "git@github.com:janisZisenis/homebrew-mrt.git",
         "git@github.com:janisZisenis/local-gitlab.git"
     ],
     "blockedBranches": [ "main" ]
