@@ -1,5 +1,3 @@
 brew "jq"
-brew "shellcheck"
-brew "shfmt"
 brew "golangci-lint"
 brew "gotestsum"
