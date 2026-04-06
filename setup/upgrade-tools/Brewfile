@@ -1,5 +1,3 @@
 brew "jq"
 brew "golangci-lint"
 brew "gotestsum"
-brew "gofumpt"
-brew "golines"
